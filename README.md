@@ -64,18 +64,6 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
    Design as shown below:
 ![This is an image](/images/updatedscreens.png)
 
-- Upon open the app, if users have account already, they can enter email and password to login their account.
-- Users can go to sign up account page to sign up new account if they do not have any existing account.
-- At sign up page, users can go back to login page if they want.
-- Upon sign up or successful login, then users will view home dashboard with setting button and category list.
-- Upon clicking on one category button to choose a category, users will see a picture screen, where they can choose to record their answer and know if their answer is correct or not, or they can choose help to hear/learn correct answers, or they can choose to pass currect word-picture and go to the next word-picture.
-- In picture screen, users can go back to dashboard by clicking the home button.
-- In dashboard screen, users can click the setting button to view setting menu page.
-- In setting menu page, they can choose to view the learning progress report, or share the report to others via the other app on the same device, or log out.
-- On progress report page, users can go back to setting page by clicking the close/cross button.
-- On share page, users can go back to setting page by clicking the close/cross button.
-- On setting page, users can choose to log out account by clicking the log out button and they will be redirected to the login page.
-
 2) **Sitemap**
 - Below is the sitemap:
 ![This is an image](/images/Sitemap2.jpg)
@@ -120,7 +108,20 @@ The overall design will base on MVC architecture.
 ## 1. Prototype animation via this link:
 https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A13
 
-UI/UX Design and flow are in accordance with the mockup in Part 1. Data to be stored and retrieved includes: profile picture, user email and password, category list, word-pictures, and learning progress data.
+- UI/UX Design are in accordance with the mockup in Part 1, with seven screens: Login screen, Sign up screen, Dashboard screen, Picture screen, Setting screen, report screen and share screen.
+- UI flow as below:
+   - Upon open the app, if users have account already, they can enter email and password to login their account.
+   - Users can go to sign up account page to sign up new account if they do not have any existing account.
+   - At sign up page, users can go back to login page if they want.
+   - Upon sign up or successful login, then users will view home dashboard with setting button and category list.
+   - Upon clicking on one category button to choose a category, users will see a picture screen, where they can choose to record their answer and know if their answer is correct or not, or they can choose help to hear/learn correct answers, or they can choose to pass currect word-picture and go to the next word-picture.
+   - In picture screen, users can go back to dashboard by clicking the home button.
+   - In dashboard screen, users can click the setting button to view setting menu page.
+   - In setting menu page, they can choose to view the learning progress report, or share the report to others via the other app on the same device, or log out.
+   - On progress report page, users can go back to setting page by clicking the close/cross button.
+   - On share page, users can go back to setting page by clicking the close/cross button.
+   - On setting page, users can choose to log out account by clicking the log out button and they will be redirected to the login page.
+- Data to be stored and retrieved includes: profile picture, user email and password, category list, word-pictures, and learning progress data.
 
 ## 2. Features and Tasks needed for the MVP:
 - Feature 1: The app should allow users to log in their accounts if they have exisitng accounts.
