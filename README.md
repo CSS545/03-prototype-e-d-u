@@ -44,7 +44,7 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
 
 
 ### Initial Design
-*MVP:*
+**MVP:**
 - P0 - Young kids should be able to view a list of categories and choose one from the list.
 - P0 - Young kids should be able to view one picture at a time via the app, and tell the app what it is. If their answer is correct, the kids can view the next picture. If their answer is wrong, the kids can choose to try again or listen to the correct answer.
 - P1 - Kids should be able to choose to pass a word and continue to learn the next word if they really cannot make it correct.
@@ -52,16 +52,16 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
 - P1 - Parents should be able to view their kid's learning progress.
 - P1 - Administrators should be able to update the word-picture list contents via the online storage place.
 
-*Expected limitations:*
+**Expected limitations:**
 - It takes time to create contents for the app. Using pictures on the internet may encounter copyright issues.
 - Young kids typically pronunce words differently from adults. By 24 months (two years), 50 to 75% of their speech usually can be intelligible to familiar people. By 36 months (three years), 75 to 100% of their speech cound be intelligible to familiar people. By four years of age, a child should usually be understood, including by people who are unfamiliar to them<sup>4</sup>. So, it may be difficult for the app to check if the pronunciation of little kids (2 and 3 years) are correct or not.
 
 
 ### UI/UX Design
-1) Screens:
+1) **Screens**
 - There would be seven screens: Login screen, Sign up screen, Dashboard screen, Picture screen, Setting screen, report screen and share screen.
-
-    *Design as shown below:*
+   
+   Design as shown below:
 ![This is an image](/images/updatedscreens.png)
 
 - Upon open the app, if users have account already, they can enter email and password to login their account.
@@ -76,23 +76,24 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
 - On share page, users can go back to setting page by clicking the close/cross button.
 - On setting page, users can choose to log out account by clicking the log out button and they will be redirected to the login page.
 
-2) Sitemap
-- *Below is the sitemap:*
+2) **Sitemap**
+- Below is the sitemap:
 ![This is an image](/images/Sitemap2.jpg)
 
 - Once open the app, user can choose to login, or go to sign up screen.
 - Then user can view dashboard, where they can choose to learn from different categories or click navigation menu button to see progress report or log out the account.
 
 
-3) Kids Task Flow (Happy Path)
-- *Below is the task flow (happy path) of young kids:*
+3) **Kids Task Flow (Happy Path)**
+- Below is the task flow (happy path) of young kids:
 ![This is an image](/images/TaskFlow2.jpg)
+
 - The account information of young kids would be stored in a local database. For most of the time, when young kids open the app, they would directly be able to access the dashboard and can choose to learn from a category. Then they would see a picture and hear the app asking them to record the pronunciation of the word that corresponds with the picture. With correct answer, they would see the next picture.
 
 
 ### Technical Architecture
-*The architecture diagram is shown as below:*
-![This is an image](/images/architecture.png)
+The architecture diagram is shown as below:
+![This is an image](/images/Architecture.png)
 
 The overall design will base on MVC architecture.
 - There will be four view components: Login View, Sign Up View, Category List View, and Picture View The Views are the part of the application that users can see and interact with.
@@ -104,29 +105,24 @@ The overall design will base on MVC architecture.
 
 
 ## Challenges and Open Questions
-1) **_Cross-platform development:_**
-*Young kids may use different devices with different OS and different screen size. How could our app work across a wide range of devices? One possible solution is to use frameworks like React Native.*
+1) **Cross-platform development:** Young kids may use different devices with different OS and different screen size. How could our app work across a wide range of devices? One possible solution is to use frameworks like React Native.
 
-2) **_Access/Usage of microphone sensor:_**
-*Our app will need to interact with kids by asking them questions, listening to their answers, and telling kids if their answers are correct or not. This leads to the need of accessing and using built-in sensors (microphone). This can be very challenging.*
+2) **Access/Usage of microphone sensor:** Our app will need to interact with kids by asking them questions, listening to their answers, and telling kids if their answers are correct or not. This leads to the need of accessing and using built-in sensors (microphone). This can be very challenging.
 
-3) **_Accuracy of speech to word translation:_**
-*When the kids recorded their voice, this app will translate the speech into text and then check if the text is same as the correct answer. Apple Speech framework can be used to convert speech into text. But how accurate can the translation be? Especially for the young kids, whose pronunciation can be different from adults.*
+3) **Accuracy of speech to word translation:** When the kids recorded their voice, this app will translate the speech into text and then check if the text is same as the correct answer. Apple Speech framework can be used to convert speech into text. But how accurate can the translation be? Especially for the young kids, whose pronunciation can be different from adults.
 
-4) **_No access to internet:_**
-*When kids are using tablets outdoor without internet connection, how can they continue to use our app? We will use to store the user information, category information, and picture information offline. Then we need to create offline storage in different devices, and data from online database should be synchronized regularly.*
+4) **No access to internet:** When kids are using tablets outdoor without internet connection, how can they continue to use our app? We will use to store the user information, category information, and picture information offline. Then we need to create offline storage in different devices, and data from online database should be synchronized regularly.
 
-5) **_Interaction with other apps on the same device:_**
-*If kids want to share their learning progress report with others via other apps on the same device, how will this app interact with other apps on the same device? React Native has an inbuilt share package, which can be useful to solve this challenge.*
+5) **Interaction with other apps on the same device:** If kids want to share their learning progress report with others via other apps on the same device, how will this app interact with other apps on the same device? React Native has an inbuilt share package, which can be useful to solve this challenge.
 
 # Part 2: Checkpoint 2 - Simple prototype
 
-1. **Prototype animation** as below:
+## 1. Prototype animation via this link:
 https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A13
 
-    *UI/UX Design and flow are in accordance with the mockup in Part 1. Data to be stored and retrieved includes: profile picture, user email and password, category list, word-pictures, and learning progress data.*
+UI/UX Design and flow are in accordance with the mockup in Part 1. Data to be stored and retrieved includes: profile picture, user email and password, category list, word-pictures, and learning progress data.
 
-2. **Features and Tasks** needed for the MVP:
+## 2. Features and Tasks needed for the MVP:
 - Feature 1: The app should allow users to log in their accounts if they have exisitng accounts.
     * Task 1: Create user login page with textboxes for email and password, and a login button.
     * Task 2: Create readText method to read email and password text by user.
@@ -175,7 +171,7 @@ https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scal
     * Task 2: Create a cross button with onClick method on share page to redirect user from share page to setting page.
 
 
-3. Mapping between **features** and **value(s)** to be delivered by the app:*
+## 3. Mapping between features and value(s) to be delivered by the app:
 * Value 1: Young kids can use the app to expand their vocabulary and improve oral communication skills.
     - *Mapping* to Feature 4: The app should show users one picture at a time and test if they know the word that represented by the picture. If they do not know, the app should let users choose to listen to correct answer or again, or even pass to next question. If their answer is correct, then the app should show users the next picture in the list.
     - *Explanation*: Kids will see pictures from the app, and they need to tell the app what it is. If they know the correct answer, they will see the next picture and learn next word. If their answer is wrong, they can choose to try again or listen to the correct answer. If they do not know the answer, they can listen to the correct pronunciation before recording. In this way, kids can expand their vocabulary via a test-driven learning mode. Kids need to listen to questions and record their voice, which will help kids improve their oral skills.
