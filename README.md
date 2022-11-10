@@ -1,7 +1,7 @@
 # **VocabTalk**
 *Lilian Cao*
 
-*Version 2*
+*Check Point 3 - Basic Functionality "Alpha"*
 
 # Part 1: Updated Project Plan
 ## Summary of Project
@@ -184,6 +184,32 @@ https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scal
 * Value 3: Littile kids are interested in using the app.
     - *Mapping* to Feature 3: The app should show users a dashboard with list of categories upon login or signup, so that users can choose the category they want to learn; and Feature 4: The app should show users one picture at a time and test if they know the word that represented by the picture. If they do not know, the app should let users choose to listen to correct answer or again, or even pass to next question. If their answer is correct, then the app should show users the next picture in the list.
     - *Explanation*: Kids will hear the question and then record their voice as answer, which is an interactive way of learning. Kids will get interest in playing such an interactive education game app. Besides, if they do not have much interest in learning word-picture in a certain category, they can choose a different category any time as they like.
+
+
+
+# Part 3: Demo of basic functionality and state management
+
+
+## Language and Dev Platform
+- **Language**: React Native
+- **Dev Platform**: Mac OS
+- **Running Platform**: iOS
+
+## Instructions to compile
+**_Prerequisites_**
+- install xcode 14
+  - Set Preferences => Locations => Command Line Tools to be xcode 14
+- install npm
+- clone this github folder
+- follow [react native instruction](https://reactnative.dev/docs/environment-setup) to compile and run, one way as follows:
+    - open terminal
+    - go to this project folder by running `cd 03-prototype-e-d-u`
+    - run `npm start`
+    - press `i`
+    - wait for ios simulater to start and install this app
+
+
+# Part 4: Remaining work to be completed for the next phase of the project ("Beta")
 
 
 
