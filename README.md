@@ -1,3 +1,4 @@
+
 # **VocabTalk**
 *Lilian Cao*
 
@@ -8,29 +9,24 @@
 It is crucial that children have explicit and robust instruction in vocabulary, to support their verbal and written communication. The existing apps in current market usually will let little kids view several pictures and meanwhile play a word sound to them, then ask them to select the correct picture that corresponds to the word they heard. These exsitng apps helps little kids build up vocabulary and enhance their listening skills, but not oral skills. Our new app will show little kids a picture and ask them to tell what it is. If they cannot speak out the correct word, they can hear the correct pronunciation of the word to learn from it. Our new app will not only help little kids build up vocabulary and enhance listening skills, but also improve their oral language skills. A survey shows that 43% of U.S. kids often use educational apps <sup>1</sup>, so there will be a big market for our educational game app.
 
 
-
 ## Project Analysis
 ### Target Audience
 Kids start to talk between 12 to 18 months of age. Once they can talk, they are ready to fast expand their vocabulary. **Our target audience is little kids that are between 2 to 5 years old and ready to talk**. Traditionally, little kids between 2 to 5 years old are educated with flashcards, our app is like interactive digital flashcards, so they will be interested in using our interactive app to learn new things. After 5 years old, kids will gradually lose interest in figuring out pictures, rather they would need to start to spell words and reading paragraphs.
 
 The first step to reach the audience is by introducing and discussing the app with preschool students in the neighbourhood. Then I plan to introduce the app in social media, like Facebook.
 
-
 ### Primary Purpose
 A strong vocabulary is critical to language development. The idea of our vocabulary educational app for little kids is to encourage them to speak out new words, developing their oral language and vocabulary skills in a fun and interactive way.
-
 
 ### Value Proposition
 Vocabulary is one of the early literacy skills that researchers say is important for children to have in order to learn to read<sup>2</sup>. The more vocabulary children have, the easier it will be for them to understand
 what they are reading. However, vocabulary remains one of the most difficult skills to teach <sup>3</sup>. Research has also shown that early childhood teachers spend an average of only five minutes per day explicitly developing oral language and vocabulary skills<sup>3</sup>, which leaves little opportunity to engage kids inconversations that can promote vocabulary development. At home, parents can use traditional flashcards to help little kids expand their vocabulary, but it takes a lot of time and effort. The problem that little kids tend to have limited exposure to vocabulary-enhancing activities at home or in educational settings has led me to the idea to develop this new app. Little kids can have interative ways to learn vocabulary from our app and talk to our app to show that they know the words. They can develop their vocabulary and oral skills at the same time. Beside, teachers and parents can save time in teaching and communicating with kids.
-
 
 ### Success Criteria
 1) Little kids can easily use the app to expand their vocabulary and improve oral communication skills.
 2) Parents can easily track their kids' learning progress.
 3) Littile kids are interested in using the app.
 4) The app can be used without interent connection.
-
 
 ### Competitor Analysis
 The existing MyVocabulary app is one of our competitor, who has about 2K ratings. It was developed by An Banh. In this app, words are grouped in different categories, like fruits, animals, vegetables and so on. For each word, the app would show several pictures and ask kids to select the correct one. This app helps little kids build up vocabulary and enhance their listening skills. This app is easy to use and includes thousands of words across 30+ levels. Kids needs to pass certain levels to unlock new levels and track their progress. The game mechanics would make kids want to keep learning. And no internet connection is required to play.
@@ -41,7 +37,6 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
 ### Monetization Model
 - Advertisement
 - In-app purchase if want customers want to remove advertisement.
-
 
 ### Initial Design
 **MVP:**
@@ -55,7 +50,6 @@ Similar to the existing MyVocabulary app, our new app will group words in differ
 **Expected limitations:**
 - It takes time to create contents for the app. Using pictures on the internet may encounter copyright issues.
 - Young kids typically pronunce words differently from adults. By 24 months (two years), 50 to 75% of their speech usually can be intelligible to familiar people. By 36 months (three years), 75 to 100% of their speech cound be intelligible to familiar people. By four years of age, a child should usually be understood, including by people who are unfamiliar to them<sup>4</sup>. So, it may be difficult for the app to check if the pronunciation of little kids (2 and 3 years) are correct or not.
-
 
 ### UI/UX Design
 1) **Screens**
@@ -189,28 +183,38 @@ https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scal
 
 # Part 3: Demo of basic functionality and state management
 
+## Demo:
+(https://youtube.com/shorts/JCejlYXZB3o?feature=share)
+
+## Basic functionality implemented:
+  - Login and signup screen with textbox and login/signup button, with state management and sqlite database. 
+  - Dashboard with setting button and category buttons.
+  - Each category button links to a word-picture flashcard.
+  - In flashcard screen, recording function is half way done, can record, but still needs more work on business logic side to perfect it.
+  - In flashcard screen, asking-for-help function has been implemented. and when users click the question button, they can hear the correct word pronuncation.
+  - On flashcard screen, clicking home button will redirect screen to dashboard screen.
+  - On dashboard screen, clicking setting button will redirect screen to setting screen.
+  - On setting screen, clicking logout button will let user log out their account and redirect screen to login screen.
 
 ## Language and Dev Platform
 - **Language**: React Native
 - **Dev Platform**: Mac OS
 - **Running Platform**: iOS
+- **Testing device:** iPad Air (4th generation)
 
 ## Instructions to compile
-**_Prerequisites_**
-- install xcode 14
-  - Set Preferences => Locations => Command Line Tools to be xcode 14
-- install npm
-- clone this github folder
-- follow [react native instruction](https://reactnative.dev/docs/environment-setup) to compile and run, one way as follows:
-    - open terminal
-    - go to this project folder by running `cd 03-prototype-e-d-u`
-    - run `npm start`
-    - press `i`
-    - wait for ios simulater to start and install this app
-
+- Follow [Expo EAS build instruction](https://docs.expo.dev/build/setup/) to build a ready-to-submit binary of this app for the Apple App Store.
+- Android platform has not been tested or built yet, so I am not sure how it would work on Android platform.
 
 # Part 4: Remaining work to be completed for the next phase of the project ("Beta")
-
+1) Use local database to load and store all catogery and word-picture content locally, so that users can use the app without internet connection. 
+2) State management for Flash Cards.
+2) Progress report function in setting screen.
+3) Sharing function in setting screen.
+4) Recording and speech-to-text function in Flash Card screen still needs more work to perfect it. 
+5) UI needs to be adjusted.
+6) Build and test Andorid native app.
+7) Build and test iOS native app in different iOS devices.
 
 
 ## Reference
@@ -222,10 +226,3 @@ https://www.figma.com/proto/MNPCXbX2Q3kodanS1HIrGZ/VocabTalk?node-id=2%3A13&scal
 *Reference 3: Barbara, A. W., Charlene, I. (2012). The Reading Teacher Vol. 66 Issue 2 pp. 321–332 DOI:10.1002/TRTR.01095. https://education.illinoisstate.edu/downloads/casei/Developing%20vocabulary%20through%20purposeful%20strategic%20conversations.pdf*
 
 *Reference 4: https://vocalsaints.co.nz/speech-clarity-whats-normal-and-when-to-seek-help/*
-
-
-
-
-
-
-
